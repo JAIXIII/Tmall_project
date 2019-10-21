@@ -93,22 +93,42 @@
     </div>
     <a href="#" id="box2collect">收藏店铺</a>
     <a href="#" id="box2QRcode"><img src="img/box2QRcode.jpg" alt=""></a>
-    <div id="rotation"></div>
+    <div id="rotation">
+        <div id="rotation_last"></div>
+        <div id="rotation_next"></div>
+    </div>
 </div>
     
-<!-- <div class="ha"></div> -->
+<div class="ha"></div>
 </body>
 </html>
 <script src="js/common.js"></script>
+
 <script>
 window.onload = function(){
-    let b= new Banner({
+    var b= new Banner({
         boxDom:$("#rotation"),
+        last:$("#rotation_last"),
+        next:$("#rotation_next"),
         type:"slide",
         width:740,
         height:420,
-        imgs:["img/img1.jpg","img/img2.jpg","img/img3.jpg","img/img1.jpg","img/img2.jpg"],
+        imgs:["img/img1.jpg","img/img2.jpg","img/img3.jpg","img/img4.jpg","img/img5.jpg"],
         timeSpace:2000,
     });
+}
+$("#rotation").onmouseenter = function(){
+    $("#rotation_last").style.display = "block";
+    $("#rotation_next").style.display = "block";
+}
+$("#rotation").onmouseleave = function(){
+    $("#rotation_last").style.display = "none";
+    $("#rotation_next").style.display = "none";
+}
+$("#rotation_last").onclick = function(){
+    to_last();
+}
+$("#rotation_next").onclick = function(){
+    to_next();
 }
 </script>
