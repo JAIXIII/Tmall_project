@@ -65,27 +65,37 @@
     <div id="nav2">
         <div class="div1">全部商品分类</div>
         <div id="all">
-            <div id="class1"><p>母婴用品</p>
+            <div id="class1">
+            <img src="img/class1.png" alt="">
+            <p>母婴用品</p>
             <a href="#">奶粉</a>
             <a href="#">纸尿裤</a>
             <a href="#">宝宝用品</a></div>
             <div class="allline1"></div>
-            <div id="class2"><p>美妆个护</p>
+            <div id="class2">
+            <img src="img/class2.png" alt="">
+            <p>美妆个护</p>
             <a href="#">面膜</a>
             <a href="#">洗发水</a>
             <a href="#">化妆水</a></div>
             <div class="allline2"></div>
-            <div id="class3"><p>食品酒水保健品</p>
+            <div id="class3">
+            <img src="img/class3.png" alt="">
+            <p>食品酒水保健品</p>
             <a href="#">零食</a>
             <a href="#">咖啡</a>
             <a href="#">葡萄酒</a></div>
             <div class="allline3"></div>
-            <div id="class4"><p>居家汽车</p>
+            <div id="class4">
+            <img src="img/class4.png" alt="">
+            <p>居家汽车</p>
             <a href="#">厨房</a>
             <a href="#">居家日用</a>
             <a href="#">小家电</a></div>
             <div class="allline4"></div>
-            <div id="class5"><p>保健/时尚配饰</p>
+            <div id="class5">
+            <img src="img/class5.png" alt="">
+            <p>保健/时尚配饰</p>
             <a href="#">蛋白粉</a>
             <a href="#">维生素</a>
             <a href="#">丝袜</a></div>
@@ -93,11 +103,16 @@
     </div>
     <a href="#" id="box2collect">收藏店铺</a>
     <a href="#" id="box2QRcode"><img src="img/box2QRcode.jpg" alt=""></a>
-    <div id="rotation">
-        <!-- <div id="rotation_last"></div>
-        <div id="rotation_next"></div> -->
-    </div>
+    <div id="rotation"></div>
+    <div id="detailClass"></div>
 </div>
+<div id="four">
+    <img src="img/four1.png" alt="">
+    <img src="img/four2.png" alt="">
+    <img src="img/four3.png" alt="">
+    <img src="img/four4.png" alt="">
+</div>
+<img id="mustbuy" src="img/mustbuy.png" alt="">
     
 <div class="ha"></div>
 </body>
@@ -117,30 +132,42 @@ window.onload = function(){
         timeSpace:2000,
     });
 }
-// $("#rotation").onmouseenter = function(){
-//     $("#rotation_last").style.display = "block";
-//     $("#rotation_next").style.display = "block";
-// }
-// $("#rotation").onmouseleave = function(){
-//     $("#rotation_last").style.display = "none";
-//     $("#rotation_next").style.display = "none";
-// }
-// $("#rotation_last").onmouseenter = function(){
-//    this.style.opacity = 0.5;
-// }
-// $("#rotation_next").onmouseenter = function(){
-//    this.style.opacity = 0.5;
-// }
-// $("#rotation_last").onmouseleave = function(){
-//    this.style.opacity = 0.3;
-// }
-// $("#rotation_next").onmouseleave = function(){
-//    this.style.opacity = 0.3;
-// }
-// $("#rotation_last").onclick = function(){
-//     to_last();
-// }
-// $("#rotation_next").onclick = function(){
-//     to_next();
-// }
+$("#class1").onmouseover = function(){
+    turnRed($("#class1"));
+}
+$("#class1").onmouseout = function(){
+    turnBlack($("#class1"));
+}
+$("#class2").onmouseover = function(){
+    turnRed($("#class2"));
+}
+$("#class2").onmouseout = function(){
+    turnBlack($("#class2"));
+}
+$("#class3").onmouseover = function(){
+    turnRed($("#class3"));
+}
+$("#class3").onmouseout = function(){
+    turnBlack($("#class3"));
+}
+$("#class4").onmouseover = function(){
+    turnRed($("#class4"));
+}
+$("#class4").onmouseout = function(){
+    turnBlack($("#class4"));
+}
+$("#class5").onmouseover = function(){
+    turnRed($("#class5"));
+}
+$("#class5").onmouseout = function(){
+    turnBlack($("#class5"));
+}
+
+function turnRed(obj){
+    obj.style.backgroundColor = "#ff195a";
+} 
+function turnBlack(obj){
+    obj.style.backgroundColor = "#333";
+} 
+
 </script>
