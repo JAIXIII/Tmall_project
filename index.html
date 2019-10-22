@@ -94,8 +94,8 @@
     <a href="#" id="box2collect">收藏店铺</a>
     <a href="#" id="box2QRcode"><img src="img/box2QRcode.jpg" alt=""></a>
     <div id="rotation">
-        <div id="rotation_last"></div>
-        <div id="rotation_next"></div>
+        <!-- <div id="rotation_last"></div>
+        <div id="rotation_next"></div> -->
     </div>
 </div>
     
@@ -117,18 +117,30 @@ window.onload = function(){
         timeSpace:2000,
     });
 }
-$("#rotation").onmouseenter = function(){
-    $("#rotation_last").style.display = "block";
-    $("#rotation_next").style.display = "block";
-}
-$("#rotation").onmouseleave = function(){
-    $("#rotation_last").style.display = "none";
-    $("#rotation_next").style.display = "none";
-}
-$("#rotation_last").onclick = function(){
-    to_last();
-}
-$("#rotation_next").onclick = function(){
-    to_next();
-}
+// $("#rotation").onmouseenter = function(){
+//     $("#rotation_last").style.display = "block";
+//     $("#rotation_next").style.display = "block";
+// }
+// $("#rotation").onmouseleave = function(){
+//     $("#rotation_last").style.display = "none";
+//     $("#rotation_next").style.display = "none";
+// }
+// $("#rotation_last").onmouseenter = function(){
+//    this.style.opacity = 0.5;
+// }
+// $("#rotation_next").onmouseenter = function(){
+//    this.style.opacity = 0.5;
+// }
+// $("#rotation_last").onmouseleave = function(){
+//    this.style.opacity = 0.3;
+// }
+// $("#rotation_next").onmouseleave = function(){
+//    this.style.opacity = 0.3;
+// }
+// $("#rotation_last").onclick = function(){
+//     to_last();
+// }
+// $("#rotation_next").onclick = function(){
+//     to_next();
+// }
 </script>
