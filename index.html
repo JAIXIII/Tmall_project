@@ -104,7 +104,32 @@
     <a href="#" id="box2collect">收藏店铺</a>
     <a href="#" id="box2QRcode"><img src="img/box2QRcode.jpg" alt=""></a>
     <div id="rotation"></div>
-    <div id="detailClass"></div>
+    <div id="detailClass">
+        <div id="close">X</div>
+        <span id="class_1">宝宝食品</span>
+        <span id="class_2">纸尿裤</span>
+        <span id="class_3">宝宝用品</span>
+        <span id="class_4">孕妇用品</span>
+        <div id="detailClass_line1"></div>
+        <div id="detailClass_line2"></div>
+        <div id="detailClass_line3"></div>
+        <div id="detailClass_line4"></div>
+        <a href="#" id="detailClass_11">新西兰-Aptamil-爱他美-幼儿奶粉</a>
+        <a href="#" id="detailClass_12">荷兰-Nutrilon-诺优能幼儿配方奶粉</a>
+        <a href="#" id="detailClass_13">德国-Topfer-特福芬婴儿配方奶粉</a>
+        <a href="#" id="detailClass_14">荷兰-Hero Baby-婴幼儿配方奶粉</a>
+        <a href="#" id="detailClass_21"> 纸尿裤</a>
+        <a href="#" id="detailClass_22">拉拉裤</a>
+        <a href="#" id="detailClass_23"> 花王</a>
+        <a href="#" id="detailClass_24">大王</a>
+        <a href="#" id="detailClass_31"> 奶瓶</a>
+        <a href="#" id="detailClass_32">奶嘴</a>
+        <a href="#" id="detailClass_33"> 餐具水杯</a>
+        <a href="#" id="detailClass_34">爽身粉</a>
+        <a href="#" id="detailClass_41"> 吸奶器</a>
+        <a href="#" id="detailClass_42">束缚带</a>
+        <a href="#" id="detailClass_43"> 盆骨矫正带</a>
+    </div>
 </div>
 <div id="four">
     <img src="img/four1.png" alt="">
@@ -113,6 +138,15 @@
     <img src="img/four4.png" alt="">
 </div>
 <img id="mustbuy" src="img/mustbuy.png" alt="">
+<div id="buyEarth">
+    <img src="img/buyEarth1.png" alt="">
+    <img src="img/buyEarth2.png" alt="">
+    <img src="img/buyEarth3.png" alt="">
+    <img src="img/buyEarth4.png" alt="">
+</div>
+<div id="CareSkinAndBody">
+    <img id="CareSkinAndBodylogo" src="img/careSkinAndBody.png" alt="">
+</div>
     
 <div class="ha"></div>
 </body>
@@ -133,41 +167,125 @@ window.onload = function(){
     });
 }
 $("#class1").onmouseover = function(){
-    turnRed($("#class1"));
+    for(let i=1;i<6;i++){
+        if(i!=1){
+            $(`#class${i}`).style.backgroundColor = "#333";
+        }
+    }
+    turnRedAndShow($("#class1"));
+    $("#class_1").innerHTML = "宝宝食品";
+    $("#class_2").innerHTML = "纸尿裤";
+    $("#class_3").innerHTML = "宝宝用品";
+    $("#class_4").innerHTML = "孕妇用品";
 }
 $("#class1").onmouseout = function(){
-    turnBlack($("#class1"));
+    turnBlackAndHide($("#class1"));
 }
 $("#class2").onmouseover = function(){
-    turnRed($("#class2"));
+    for(let i=1;i<6;i++){
+        if(i!=2){
+            $(`#class${i}`).style.backgroundColor = "#333";
+        }
+    }
+    turnRedAndShow($("#class2"));
+    $("#class_1").innerHTML = "美容护肤";
+    $("#class_2").innerHTML = "美妆热门品牌";
+    $("#class_3").innerHTML = "个人护理/美容工具";
+    $("#class_4").innerHTML = "个人护理/美容工具热门品牌 ";
 }
 $("#class2").onmouseout = function(){
-    turnBlack($("#class2"));
+    turnBlackAndHide($("#class2"));
 }
 $("#class3").onmouseover = function(){
-    turnRed($("#class3"));
+    for(let i=1;i<6;i++){
+        if(i!=3){
+            $(`#class${i}`).style.backgroundColor = "#333";
+        }
+    }
+    turnRedAndShow($("#class3"));
+    $("#class_1").innerHTML = "进口零食";
+    $("#class_2").innerHTML = " 进口酒水饮料";
+    $("#class_3").innerHTML = "进口粮油调味";
+    $("#class_4").innerHTML = " 热门畅销品牌";
 }
 $("#class3").onmouseout = function(){
-    turnBlack($("#class3"));
+    turnBlackAndHide($("#class3"));
 }
 $("#class4").onmouseover = function(){
-    turnRed($("#class4"));
+    for(let i=1;i<6;i++){
+        if(i!=4){
+            $(`#class${i}`).style.backgroundColor = "#333";
+        }
+    }
+    turnRedAndShow($("#class4"));
+    $("#class_1").innerHTML = "厨房餐具";
+    $("#class_2").innerHTML = "居家日用";
+    $("#class_3").innerHTML = "家庭清洁";
+    $("#class_4").innerHTML = " 汽车机油";
 }
 $("#class4").onmouseout = function(){
-    turnBlack($("#class4"));
+    turnBlackAndHide($("#class4"));
 }
 $("#class5").onmouseover = function(){
-    turnRed($("#class5"));
+    for(let i=1;i<6;i++){
+        if(i!=5){
+            $(`#class${i}`).style.backgroundColor = "#333";
+        }
+    }
+    turnRedAndShow($("#class5"));
+    $("#class_1").innerHTML = "进口保健品精选";
+    $("#class_2").innerHTML = "箱包/配饰";
+    $("#class_3").innerHTML = "热门保健品品牌";
+    $("#class_4").innerHTML = " 眼镜/手表/丝袜";
 }
 $("#class5").onmouseout = function(){
-    turnBlack($("#class5"));
+    turnBlackAndHide($("#class5"));
+}
+$("#detailClass").onmouseover = function(){
+    for(let i=1;i<6;i++){
+        $(`#class${i}`).style.backgroundColor = "#333";
+    }
+    if(parseInt(event.pageY)>=159 && parseInt(event.pageY)<=243){
+        turnRedAndShow($("#class1"));
+    }
+    if(parseInt(event.pageY)>243 && parseInt(event.pageY)<=327){
+        turnRedAndShow($("#class2"));
+    }
+    if(parseInt(event.pageY)>327 && parseInt(event.pageY)<=411){
+        turnRedAndShow($("#class3"));
+    }
+    if(parseInt(event.pageY)>411 && parseInt(event.pageY)<=494){
+        turnRedAndShow($("#class4"));
+    }
+    if(parseInt(event.pageY)>494 && parseInt(event.pageY)<=577){
+        turnRedAndShow($("#class5"));
+    }
+}
+$("#detailClass").onmouseout = function(){
+    this.style.display = "none";
+    this.style.zIndex = -1;
+    for(let i=1;i<6;i++){
+        $(`#class${i}`).style.backgroundColor = "#333";
+    }
+}
+$("#close").onclick = function(){
+    $("#detailClass").style.display = "none";
+    $("#detailClass").style.zIndex = -1;
+    for(let i=1;i<6;i++){
+        turnBlackAndHide($(`#class${i}`));
+        // $(`#class${i}`).style.backgroundColor = "#333";
+    }
 }
 
-function turnRed(obj){
+function turnRedAndShow(obj){
     obj.style.backgroundColor = "#ff195a";
+    $("#detailClass").style.display = "block";
+    $("#detailClass").style.zIndex = 2;
 } 
-function turnBlack(obj){
+function turnBlackAndHide(obj){
     obj.style.backgroundColor = "#333";
+    $("#detailClass").style.display = "none";
+    $("#detailClass").style.zIndex = -1;
 } 
 
 </script>
