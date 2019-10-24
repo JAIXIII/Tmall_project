@@ -248,6 +248,9 @@ position: relative;}
 #box2collect{float: right;
     font-size: 14px;
     margin-top: -25px;}
+#box2collect:hover{
+    text-decoration: underline;
+}
 #box2QRcode{
     width: 200px;
     height: 400px;
